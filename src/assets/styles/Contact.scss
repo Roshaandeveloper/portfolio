@@ -18,9 +18,12 @@
     color: white;
   }
 
-  fieldset {
-    background-color: white;
-  }
+ .MuiInputBase-input, 
+.MuiInputBase-inputMultiline {
+  color: black !important;
+  background-color: white;
+}
+
 }
 
 label {
