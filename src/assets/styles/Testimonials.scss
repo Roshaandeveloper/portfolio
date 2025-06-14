@@ -1,0 +1,122 @@
+.testimonial-vertical-container {
+  text-align: center;
+  padding: 4% 10%;
+  background:transparent;
+  color: #fff;
+}
+
+.testimonial-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  margin-top: 30px;
+}
+
+.testimonial-card-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 1000px;
+  background: transparent;
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease;
+  height: 220px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.profile-pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 30px;
+  border: 3px solid #5000ca;
+}
+
+.testimonial-content {
+  text-align: left;
+
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+
+  .quote {
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .info-line {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: #7e7878;
+  }
+}
+
+.testimonial-dots {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 20px;
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    background: #555;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &.active {
+      background: #5000ca;
+      transform: scale(1.3);
+    }
+
+    &:hover {
+      background: #888;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-wrapper {
+    flex-direction: column;
+  }
+
+  .testimonial-card-vertical {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .profile-pic {
+    margin: 0 auto 20px;
+  }
+
+  .testimonial-content {
+    text-align: center;
+
+    .info-line {
+      justify-content: center;
+    }
+  }
+
+  .testimonial-dots {
+    flex-direction: row;
+    margin-top: 15px;
+
+    .dot {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

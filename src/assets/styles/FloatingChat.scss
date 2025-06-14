@@ -1,0 +1,50 @@
+.floating-chat {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: rgba(29, 245, 104, 0.5); // semi-transparent for blur effect
+    backdrop-filter: blur(10px); // add blur to background
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border: 2px solid white;
+
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid white;
+    }
+
+    span {
+        font-weight: 100;
+        font-size: 16px;
+        font-family: 'Arial', sans-serif;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 8px 12px;
+
+        span {
+            font-size: 14px;
+        }
+
+        img {
+            width: 26px;
+            height: 26px;
+        }
+    }
+}

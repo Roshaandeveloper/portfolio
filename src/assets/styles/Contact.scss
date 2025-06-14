@@ -1,51 +1,98 @@
-.contact_wrapper svg {
-  font-size: 1em;
-  vertical-align: middle;
-  margin-right: 5px;
-}
+#contact {
+  padding: 60px 20px;
+  background: transparent;
 
-.contact-form {
-  padding-top: 20px;
-
-  button {
-    float: right;
-    background-color: white;
-    color: #050f0b;
+  .items-container {
+    max-width: 900px;
+    margin: auto;
+    background: transparent;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   }
 
-  button:hover {
-    background-color: #5000ca;
-    color: white;
+  .contact_wrapper {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      // color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      // color: #555;
+      margin-bottom: 25px;
+      text-align: center;
+    }
   }
 
- .MuiInputBase-input, 
-.MuiInputBase-inputMultiline {
-  color: black !important;
-  background-color: white;
-}
+  .contact-form {
+    padding-top: 10px;
 
-}
+    form {
+      width: 100%;
+    }
 
-label {
-  font-size: 1.2rem;
-  font-family: 'DomaineDispNar-Medium', sans-serif;
-}
+    .form-flex {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
 
-.form-flex {
-  display: flex;
-  gap: 15px;
-  padding-bottom: 15px;
-}
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 15px;
+      }
 
-.form-flex .MuiFormControl-root {
-  width: 100%;
-}
+      .MuiFormControl-root {
+        width: 100%;
+      }
+    }
 
-form {
-  width: 100% !important;
-}
+    .body-form {
+      width: 100%;
+      margin-bottom: 20px !important;
+    }
 
-.body-form {
-  width: 100% !important;
-  margin-bottom: 15px !important;
+    button {
+      float: right;
+      background-color: #5000ca;
+      color: white;
+      padding: 10px 30px;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s ease;
+
+      &:hover {
+        background-color: #3d009c;
+      }
+    }
+  }
+
+  // Optional: icon styling inside label or other places
+  svg {
+    font-size: 1em;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+
+  label {
+    font-size: 1rem;
+    font-family: 'DomaineDispNar-Medium', sans-serif;
+    color: #333;
+  }
+
+  .MuiInputBase-input,
+  .MuiInputBase-inputMultiline {
+    color: black !important;
+    background-color:transparent;
+  }
+
+  .MuiFormHelperText-root {
+    font-size: 0.8rem;
+    color: red !important;
+  }
 }

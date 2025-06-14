@@ -19,7 +19,7 @@ function Main() {
           </div>
           <h1>Roshan Ali</h1>
       <p style={{ fontSize: '24px' }}>
-  Hello, I’m a Full Stack Web Developer with experience in building scalable apps using React, Flask, and TypeScript. I work across the full SDLC from frontend/backend to CI/CD and DevOps using tools like Docker and GitHub Actions. I also build GenAI-enabled solutions using OpenAI, LangChain, and Hugging Face.
+ Hi, I’m a Full Stack Developer with 3 years of experience in building scalable web applications using React, Flask, and TypeScript. I work across the entire software development lifecycle from frontend and backend development to CI/CD and DevOps
 </p>
 
 

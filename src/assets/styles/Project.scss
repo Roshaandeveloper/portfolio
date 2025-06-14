@@ -1,49 +1,138 @@
 .projects-container {
-    display: flex;
-    flex-direction: column;
-    padding: 5% 10%;
-    text-align: left;
-}
-  
-.projects-container .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 50px;
-}
-  
-.projects-container .projects-grid .project {
-    text-align: left;
-}
-  
-.project h2:hover {
-    text-decoration: underline;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-}
-  
-.zoom {
-    border-radius: 5px;
-    transition: transform .2s;
-    margin: 0 auto;
-}
-  
-.zoom:hover {
-    transform: scale(1.05);
+  padding: 5% 10%;
+  text-align: center;
+  overflow: hidden;
 }
 
-@media screen {
-    @media (max-width: 700px) {
-        .projects-container {
-            display: block;
-            padding-left: 5%;
-            padding-right: 5%;
-        }
+.slider-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 20px 0;
   
-        .projects-container .projects-grid {
-            display: block;
-        }
-      
-        .projects-container .projects-grid .project {
-            padding-bottom: 5%;
-        }
-    }
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  height: 100%;
+  width: 100%; /* Default: full width */
+}
+
+/* Laptop (≥1025px) */
+@media (min-width: 1025px) {
+  .slider-track {
+    width: 970px; /* example for 3 cards */
+  }
+}
+
+/* Tablet (768px–1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .slider-track {
+    width: 540px; /* example for 2 cards */
+  }
+}
+
+/* Mobile (≤767px) */
+@media (max-width: 767px) {
+  .slider-track {
+    width: 100%; /* usually full width is best for mobile */
+  }
+}
+
+
+.project {
+  flex: 0 0 33.33%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  text-align: left;
+  border: 2px solid #444;
+  border-radius: 10px;
+  margin: 10px 5px 0 5px;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project img {
+  margin-top: 15px;
+  width: 95%;
+  margin-left: 9px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.project img:hover {
+  transform: scale(1.05);
+}
+
+.slider-arrow {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+  background: transparent;
+  transform: scale(1.1);
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #555;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #4a9ff5;
+  transform: scale(1.2);
+}
+
+.dot:hover {
+  background: #888;
+}
+
+@media (max-width: 1440px) {
+  .project {
+    flex: 0 0 33.33%; /* 3 cards for laptop */
+  }
+}
+
+@media (max-width: 1024px) {
+  .project {
+    flex: 0 0 50%; /* 2 cards for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .project {
+    flex: 0 0 100%; /* 1 card for mobile */
+    margin: 10px 0;
+  }
 }

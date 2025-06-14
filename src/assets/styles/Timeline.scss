@@ -25,14 +25,27 @@
 
 .vertical-timeline-element .vertical-timeline-element-date {
     color: white;
+    
 }
 
 .svg-inline--fa {
     color: white;
+
 }
 
 @media screen and (max-width: 1170px) {
     .vertical-timeline-element .vertical-timeline-element-date {
         color: rgb(39, 40, 34);
     }
+}
+/* Add spacing between timeline cards on mobile and tablet */
+@media screen and (max-width: 1024px) {
+  .vertical-timeline-element {
+    margin-bottom: 30px !important;
+  }
+
+  /* Optional: add extra space inside card for better look */
+  .vertical-timeline-element-content {
+    padding: 20px !important;
+  }
 }
